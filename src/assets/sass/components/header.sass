@@ -1,0 +1,42 @@
+header.header
+  background-color: #3a6ff6
+  height: 80px
+  display: flex
+  align-items: center
+
+  .container
+    align-items: center
+    justify-content: space-between
+
+  .logo-block
+    display: flex
+    align-items: center
+
+  .logo-zone
+    display: flex
+    align-items: center
+
+    .logo
+      width: 48px
+      height: 48px
+      cursor: pointer
+      box-sizing: content-box
+
+    .logo-text
+      font-size: 26px
+      cursor: pointer
+      margin-left: 10px
+
+  .logo-zone
+    &:hover, &:focus
+      .logo-text
+        text-decoration: underline
+
+  .nav-text
+    font-size: 19px
+    font-weight: 600
+    color: rgba(255, 255, 255, 0.5)
+    border-left: 2px solid rgba(255, 255, 255, 0.3)
+    padding-left: 14px
+    margin-left: 14px
+    margin-top: 4px
