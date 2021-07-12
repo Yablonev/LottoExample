@@ -1,0 +1,89 @@
+@import '@/assets/sass/global/variables'
+
+.WinningNumbers
+  display: flex;
+  flex-direction: column
+  justify-content: stretch
+  width: 100%
+  overflow: hidden
+  background: #fff
+  border-radius: 10px
+  box-shadow: $shadow
+
+  .WinningNumbers__content
+    padding: 20px
+
+  .WinningNumbers__date
+    margin-bottom: 24px
+    font-size: 1.1rem
+    display: block
+    color: #6c7293
+    font-weight: 500
+    padding-bottom: 16px
+    margin-bottom: 16px
+
+  .DrawNumbersCollection
+    display: flex
+    flex-direction: column
+    margin: -12px -4px
+    color: #6c7293
+
+  .DrawNumbersCollection__container
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    justify-content: flex-start
+    margin-right: 32px
+
+  .LottoBall
+    position: relative
+    width: 48px
+    height: 48px
+    font-size: 20px
+    margin: 8px 6px
+    font-weight: 500
+    user-select: none
+
+    &:after
+      content: ''
+      z-index: 1
+      display: block
+      position: absolute
+      width: 40%
+      height: 20%
+      left: 50%
+      bottom: 0
+      border-radius: 50%
+      transform: translateX(-50%)
+      box-shadow: 0 -2px 24px rgba(0, 0, 0, .6)
+
+.LottoBall__circle
+  display: flex
+  position: relative
+  width: 100%
+  height: 100%
+  text-align: center
+  align-items: center
+  justify-content: center
+  color: #544c4c
+  border-radius: 50%
+  z-index: 2
+  background-color: #fff
+  box-shadow: inset -3px -3px 8px rgba(0, 0, 0, .2), inset 0 0 16px rgba(0, 0, 0, .1)
+  background: #fbe54b radial-gradient(circle at top left,#fbe54b 0,#fcec78 30%,#fbe54b 60%,#c7ae08 100%)
+
+.WinningNumbers__notice
+  display: flex
+  align-items: center
+  justify-content: space-between
+  font-style: italic
+  font-size: .9rem
+  font-weight: 400
+  color: #6c7293
+
+.LottoBlock
+  margin-bottom: 48px
+
+.lotto
+  width: 120px
+  height: 120px

@@ -1,0 +1,32 @@
+@import '@/assets/sass/global/variables'
+
+.select
+  position: relative
+  display: flex
+  width: 200px
+
+  &::after
+    content: '\25BC'
+    position: absolute
+    top: 0
+    right: 0
+    padding: 12px 14px
+    color: #6c7293
+    cursor: pointer
+    font-size: 12px
+    pointer-events: none
+    transition: .25s all ease
+    box-sizing: border-box
+    opacity: .5
+
+  select
+    background: white
+    border-radius: .25em
+    padding: 10px 14px
+    color: #6c7293
+    font-weight: 500
+    font-size: 1rem
+    cursor: pointer
+    box-shadow: $shadow
+    width: 200px
+    font-family: 'Roboto', sans-serif

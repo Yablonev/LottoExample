@@ -1,0 +1,47 @@
+@import '@/assets/sass/global/variables'
+
+.Table
+  margin-top: 28px
+  background: #fff
+  border-radius: 10px
+  box-shadow: $shadow
+  padding: 0 20px 20px
+
+  .OddsTableContainer__table
+    width: 100%
+    border-collapse: collapse
+
+  .OddsTableRow
+    color: #6c7293
+    font-size: 1rem
+    line-height: 33px
+    vertical-align: middle
+    font-weight: 400
+    border-bottom: 2px dashed #eee
+
+    &:last-child
+      border-bottom: 0
+
+    th
+      color: #6c7293
+      font-weight: 500
+      font-size: 1rem
+      text-align: left
+      padding: 16px 0
+
+      &:nth-child(1)
+        width: 120px
+
+      &:nth-child(2)
+        width: 130px
+
+      &:nth-child(3)
+        width: 150px
+
+    td:not(:last-child), th:not(:last-child)
+      padding-right: 8px
+
+    td
+      &:nth-child(4)
+        color: $accent
+        font-weight: 500

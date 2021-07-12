@@ -2,6 +2,9 @@ import axios from 'axios'
 
 const endpoint = 'http://localhost:8010/proxy/'
 
+const type = 'eurojackpot'
+
+// eslint-disable-next-line
 export default async function graphql(): Promise<any> {
   try {
     const result = await axios({
@@ -9,7 +12,7 @@ export default async function graphql(): Promise<any> {
       url: `${endpoint}graphql`,
       data: {
         query: `{
-            draw(type: "eurojackpot") {
+            draw(type: "${type}") {
               draws {
                 date
                 gameAmount

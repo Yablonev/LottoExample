@@ -1,3 +1,5 @@
+@import '@/assets/sass/global/variables'
+
 body
   min-height: 100vh
   background-color: #f0eff3
@@ -12,3 +14,29 @@ body
   width: 1060px
   margin: 0 auto
   position: relative
+
+@supports not (-webkit-background-clip: text)
+  .money
+    color: $accent
+
+@supports (-webkit-background-clip: text)
+  .money
+    background: -webkit-linear-gradient(to right, #3f51b5, #95cb7f, #3a6ff6)
+    background: linear-gradient(to right, #3f51b5, #95cb7f, #3a6ff6)
+    background-size: 3200px 200px
+    color: transparent !important
+    -webkit-background-clip: text
+    -webkit-animation: animate-money
+    -webkit-animation-delay: 0
+    -webkit-animation-duration: 7s
+    -webkit-animation-timing-function: linear
+    -webkit-animation-iteration-count: infinite
+    -webkit-animation-fill-mode: forwards
+    transition: font-size 500ms ease-in-out
+
+@keyframes animate-money
+  0%
+    background-position: 0 3200px
+
+  100%
+    background-position: 3200px 0

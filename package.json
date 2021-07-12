@@ -7,7 +7,8 @@
     "dev": "lcp --proxyUrl https://www.lottohelden.de && vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "proxy": "lcp --proxyUrl https://www.lottohelden.de"
+    "proxy": "lcp --proxyUrl https://www.lottohelden.de",
+    "deploy": "npm run build && scp -r build/* yablonev@185.185.68.125:/var/www/lotto.yablonev.art/html/"
   },
   "dependencies": {
     "axios": "^0.21.1",
