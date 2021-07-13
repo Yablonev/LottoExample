@@ -2,10 +2,8 @@ import axios from 'axios'
 
 const endpoint = 'http://localhost:8010/proxy/'
 
-const type = 'eurojackpot'
-
 // eslint-disable-next-line
-export default async function graphql(): Promise<any> {
+export default async function graphql(type: string): Promise<any> {
   try {
     const result = await axios({
       method: 'POST',

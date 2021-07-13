@@ -8,6 +8,10 @@
     <Numbers :numbers="result.numbers" :date="result.date" :additionalNumbers="result.additionalNumbers" />
     <Winners :winners="result.odds" />
   </div>
+  <div class="loading" v-else>
+    <img :src="require('@/assets/images/loading.svg')" alt="loading" />
+    <h1>Loading...</h1>
+  </div>
 </template>
 
 <script lang="ts">
@@ -38,7 +42,7 @@ export default class EurojackpotResults extends Vue {
   }
 
   async mounted(): Promise<void> {
-    const { result, error } = await graphql()
+    const { result, error } = await graphql('eurojackpot')
     if (error) return
     this.results = result.data.draw.draws
     result.data.draw.draws.forEach((draw: JackpotResultType) => {
